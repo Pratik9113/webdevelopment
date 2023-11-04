@@ -1,0 +1,16 @@
+h1{
+    color:red;
+}
+img{
+    border: solid 4px black;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit:cover;
+}
+body{
+    background-color: aqua;
+}
+:root{
+    color :#3d3d3d;
+    font-size: 32px;
+}
