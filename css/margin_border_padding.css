@@ -1,0 +1,22 @@
+.mydiv{
+    background-color: red;
+    width:fit-content;
+    height: fit-content;
+    /* border :10px solid black; */
+    border-color: black;
+    border-width: 50px;
+    border-style: solid;
+
+    margin :50px;
+    padding: 200px; 
+}
+body{
+    margin: 0;
+    background-color: rgb(159, 159, 211);
+}
+h1{
+    margin:0;
+}
+p{
+    margin : 0;
+}
