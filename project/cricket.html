@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Your custom styles here */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Cricket Game</h1>
+        
+        <!-- Score Card -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Bowler</h2>
+                <p id="bowlerDetails">Bowler Name: John Doe</p>
+                <p id="bowlerStats">Overs: 0, Wickets: 0</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Batsman</h2>
+                <p id="batsmanDetails">Batsman Name: Jane Doe</p>
+                <p id="batsmanStats">Runs: 0, Balls: 0</p>
+            </div>
+        </div>
+
+        <!-- Button to simulate ball delivery -->
+        <button class="btn btn-primary mt-3" onclick="deliverBall()">Deliver Ball</button>
+        
+        <!-- Result Display -->
+        <div class="mt-3">
+            <h3>Result:</h3>
+            <p id="result"></p>
+        </div>
+
+        <!-- Over and Run Details -->
+        <div class="mt-3">
+            <h3>Game Progress:</h3>
+            <p id="overDetails">Overs: 0</p>
+            <p id="runDetails">Total Runs: 0</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script>
+        var bowler = {
+            name: "John Doe",
+            overs: 0,
+            wickets: 0
+        };
+
+        var batsman = {
+            name: "Jane Doe",
+            runs: 0,
+            balls: 0
+        };
+
+        var game = {
+            overs: 0,
+            runs: 0
+        };
+
+        function deliverBall() {
+            // Simulate ball delivery
+            var runsScored = Math.floor(Math.random() * 7); // Random runs between 0 and 6
+
+            // Update batsman and bowler stats
+            updateBatsmanStats(runsScored);
+            updateBowlerStats();
+
+            // Update game progress
+            updateGameProgress();
+
+            // Display result
+            displayResult(runsScored);
+        }
+
+        function updateBatsmanStats(runsScored) {
+            batsman.runs += runsScored;
+            batsman.balls++;
+            document.getElementById("batsmanStats").innerHTML = `Runs: ${batsman.runs}, Balls: ${batsman.balls}`;
+        }
+
+        function updateBowlerStats() {
+            bowler.overs += 0.1; // Assuming each click delivers 1/10th of an over
+            document.getElementById("bowlerStats").innerHTML = `Overs: ${bowler.overs.toFixed(1)}, Wickets: ${bowler.wickets}`;
+        }
+
+        function updateGameProgress() {
+            game.overs += 0.1;
+            game.runs += runsScored;
+            document.getElementById("overDetails").innerHTML = `Overs: ${game.overs.toFixed(1)}`;
+            document.getElementById("runDetails").innerHTML = `Total Runs: ${game.runs}`;
+        }
+
+        function displayResult(runsScored) {
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = `Bowler sent the ball. Batsman played and scored ${runsScored} run(s)!`;
+        }
+    </script>
+</body>
+</html>

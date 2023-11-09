@@ -1,0 +1,23 @@
+.bg-body-col{
+    background-color: rgb(48, 48, 231);
+}
+h1{
+    text-align: center;
+}
+.colored-section{
+    background-color: rgb(80, 80, 198);
+    height:2000px;
+}
+.green{
+    background-color:rgb(0, 194, 194);
+    height: 100px;
+    border: 1px solid black;
+}
+.row{
+    margin-bottom: 50px;
+}
+.red{
+    background-color: red;
+    height:100px;
+    border:1px solid #fff;
+}
