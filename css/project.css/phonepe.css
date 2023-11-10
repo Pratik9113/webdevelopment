@@ -3,31 +3,32 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     /* width: 1268px; */
     background-color:rgb(12, 14, 14);
+    width : auto;
+    height: 72px;
 }
 li{
     display: inline-block;
 }
-li div .navigation-link a {
-    left: 30px;
-}
+
 .logo img{ 
     vertical-align: middle; 
-    margin-right: 20px; 
-    margin-bottom: 20px;
-    width: 125px;
-    height: 125px;
-    margin : 10% 10%;
+    margin : 50% 25%;
+    margin-bottom : 40px;
+    margin-left: 30px;
+    
+    width: 66px;
+    height: 66px;
     background-color: rgb(12, 14, 14);
 }
 
 header .navigation-link{
     display: flex;
     text-decoration: none;
-    margin-right: 600px;
+    margin-right: 800px;
     justify-content: center;
     width: 100%;
 }
@@ -42,4 +43,15 @@ header .navigation-link a {
     text-decoration: none;
     text-transform: uppercase;
     top: 100px; 
+}
+/*the function part */
+.maino p{
+    background-color: rgb(88, 90, 87);
+    width : auto;
+    height: 700pxs;
+}
+.maino p img{
+    border: 10px black;
+    border-radius: 50%;
+    aspect-ratio: 1;
 }
