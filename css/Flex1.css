@@ -1,0 +1,28 @@
+div{
+    position :relative;
+    display: inline-block;
+    background-color: aquamarine;
+}
+td{
+    border : 5px solid white;
+    padding : 5px;
+    background-color: aquamarine;
+}
+.col-1{
+    width : 20%;
+    position:absolute;
+}
+.col-2{
+    position: absolute;
+    left : 23%;
+    width : 30%;
+}
+.col-3{
+    position:absolute;
+    left : 55%;
+    width : 40%;
+    
+}
+.row{
+    width:200px;
+}
