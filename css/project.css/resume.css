@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+.navbar{
+    height: 70px;
+    justify-content: space-evenly;
+    background-color: rgb(21, 20, 20);
+    color: rgb(248, 239, 239); 
+    border-radius: 2%;
+    display: flex;
+    align-items: center;
+}
+.nav-logo{
+    height : 60px;
+    width : 60px;
+    
+}
+.logo{
+    background-image: url("https://cdn-icons-png.flaticon.com/128/942/942748.png");
+    background-size: cover;
+    justify-content: center;
+     margin : 10px 0px 0px 15px; 
+    height:40px;
+    width : 40px;
+}
+.border{
+    border: 1.5px solid transparent;
+}
+.border:hover{
+    border: 1.5px solid white;
+}
+/*----box-----*/
+.nav-address{
+    margin-left: 20px;
+    width : 60px;
+    height: 60px;
+}
+
+.add-first{
+    margin-top: 10px;
+    margin-left: 3px;
+    color: #cccccc;
+    font-size: 0.65rem;
+}
+.add-sec{
+    font-size: 0.75rem;
+}
+.add-icon{
+    margin : 2px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}
+.nav-search{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color:  #febd68;
+    width : 620px;
+    height : 40px;
+    border-radius: 3px;
+}
+.search-select{
+    background-color: #f3f3f3;
+    width : 50px;
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: none;
+}
+.search-input{
+    width: 100%;
+    font-size: 1 rem;
+    border: none;
+}
+.search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: black;
+}
+.nav-search:hover{
+    border : 2px solid #febd88;
+}
+/*box4*/
+.nav-sign-in{
+    margin-left: 20px;
+}
+.nav-return{
+    margin-left: 25px;
+}
+span{
+    font-size: 0.7rem;
+
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight : 700;
+}
+.nav-cart img{
+   font-size: 35px;
+}
+.nav-cart{
+    margin-left: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}

@@ -3,9 +3,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* width: 1268px; */
+    margin-left: auto;
+    margin-right: auto; 
+     width: 1268px;
     background-color:rgb(12, 14, 14);
     width : auto;
     height: 72px;
@@ -30,7 +30,6 @@ header .navigation-link{
     text-decoration: none;
     margin-right: 800px;
     justify-content: center;
-    width: 100%;
 }
 header .navigation-link a {
     color: white;
@@ -46,28 +45,34 @@ header .navigation-link a {
 }
 /*the function part - about me */
 .aboutMe {
-    background-color: aliceblue;
+    background-color: rgb(92, 157, 214);
     width: auto;
     height: 500px;
 }
+
   
-.row {
+.row{
     display: flex; 
     flex-direction: row;
     justify-content: space-around; 
 }
 .info{
     display : inline-block;
+    width: 500px;
+    height : auto;
+    background-color: rgb(63, 146, 218);
 }
 .info img{
     display: inline-flex;
-    width : auto;
-    height : 300px;
+    width : 500px;
+    height :500px;
     aspect-ratio: 1;
     border : 30px;
     border-radius: 50%;
-    margin : -33px 30px 40px 200px;
+    /*margin : -22px 30px 40px 200px;*/
 }
+
+/*ye alag hai */
 .link{
     margin-top: -20px;
     background-color: rgb(52, 38, 255);
