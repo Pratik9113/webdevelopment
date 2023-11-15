@@ -1,11 +1,12 @@
 * {
     margin: 0;
+    
     font-family: Arial, Helvetica, sans-serif;
     border: border-box;
 }
 .navbar{
     height:75px;
-    background-color: white;
+    background-color: red ;
     color: rgb(248, 239, 239); 
     display: flex;
     justify-content:space-around;
@@ -25,10 +26,10 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-weight: 700;
-    color: black;
+    color: white;
 }
 .sign-in-button{
-    background-color: rgb(66, 66, 255);
+    background-color: black;
     border: none;
     color: white;
     font-weight: 700;
@@ -43,16 +44,22 @@
     align-items: center;
 }
 
-/* main section */
+/* main section1 */
+.main-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .main{
     height : 700px;
     width: 100%;
-    background-color: rgb(65, 65, 241);
+    background-color: rgb(0, 0,0);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 .text p{
+    color: white;
     size: 45px;
     font-size: 30px;
     font-weight: 900;
@@ -60,6 +67,6 @@
     margin-left: 50px;
 }
 .sign-in-button1{
-    background-color: rgb(236, 35, 35);
+    background-color: red;
     border-radius: 5%;
 }
