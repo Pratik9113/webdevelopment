@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+.navbar{
+    height:75px;
+    background-color: white;
+    color: rgb(248, 239, 239); 
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.border{
+    border: 1.5px solid transparent;
+}
+.border:hover{
+    border: 1.5px solid white;
+}
+.campus-connect a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.under{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+.sign-in-button{
+    background-color: rgb(66, 66, 255);
+    border: none;
+    color: white;
+    font-weight: 700;
+    height:30px;
+    width: 79px;
+    border-radius: 2%;
+    margin-left: 20px;
+}
+.sign-in{
+    display: flex;
+     justify-content: center; 
+    align-items: center;
+}
+
+/* main section */
+.main{
+    height : 700px;
+    width: 100%;
+    background-color: rgb(65, 65, 241);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.text p{
+    size: 45px;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: left;
+    margin-left: 50px;
+}
+.sign-in-button1{
+    background-color: rgb(236, 35, 35);
+    border-radius: 5%;
+}
