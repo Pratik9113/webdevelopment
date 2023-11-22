@@ -20,3 +20,6 @@ console.log(y);
 
 isFollow = true;
 console.log(isFollow);
+
+// it is dynamically typed language
+// = sign is assignment operator 
