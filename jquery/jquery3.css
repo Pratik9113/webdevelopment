@@ -1,0 +1,14 @@
+body{
+    background-color: aliceblue;
+}
+:root {
+    font-size: 16px;
+    color: #3d3d3d;
+}
+.green{
+    color: #32c888;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.big{
+    font-size: 400%;
+}
