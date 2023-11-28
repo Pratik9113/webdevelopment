@@ -9,23 +9,78 @@ db.movies.insertOne({
 // for many entities
 db.movies.insertMany([
     {
-        _id : 101,
-        name : "avatar",
-        year : 2023,
-        genre : ["action","scri-fri","drama"],
-        rating : 7.8
+        _id: 101,
+        name: "avatar",
+        year: 2023,
+        genre: ["action", "sci-fi", "drama"],
+        rating: 6.7
     },
     {
-        _id : 102,
-        name : "avatar",
-        year : 2023,
-        genre : ["action","scri-fri","drama"],
-        rating : 7.9
+        _id: 102,
+        name: "avatar",
+        year: 2023,
+        genre: ["action", "sci-fi", "drama"],
+        rating: 7.9
     },
-    {    _id : 103,
-        name : "avatar",
-        year : 2023,
-        genre : ["action","scri-fri","drama"],
-        rating : 7.7
+    {
+        _id: 103,
+        name: "avatar",
+        year: 2023,
+        genre: ["action", "sci-fi", "drama"],
+        rating: 7.7
     },
 ])
+
+
+// db.movies.find()
+// db.movies.findOne() - it will return the frst one
+// filter
+// db.movies.find({rating:6.7})
+// db.movies.find({}, {name:1,genre:1})
+// db.movies.find({}, {_id:0,name:1,genre:1})
+
+db.movies.updateOne({
+    name:"avatar"
+},
+{
+    $set:{rating:6.5}
+}
+)
+
+db.movies.updateMany({},{f
+    $inc:{rating:0.1}
+})
+
+db.movies.deleteOne({name:"avatar"})
+
+# relationship in mongoDB
+// insert one more movie 
+
+db.movies.insertOne(
+{
+    _id: 104,
+    name: "Black Panther",
+    year: 2018,
+    genre: ['Action','sci-fi'],
+    rating: 9.5,
+    reviews: [
+        {
+            authorName: "bob",
+            ratings: 9,
+            review: "Best movie of the marvel "
+        },
+        {
+            authorName: "bojohn",
+            ratings: 5,
+            review: "worst movie of the marvel "
+        }
+    ]
+})
+
+
+db.movies.findOne({
+    name : "Black Panther",
+},
+{
+    reviews:1
+})
