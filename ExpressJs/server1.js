@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 app.listen(3000,function(){
-    console.log("server initiated");
+    console.log(" server restarted but with nodemon from console.log");
 });
 
 //  base url
@@ -22,4 +22,9 @@ app.get("/contact", function(req,res){
 
 app.get("/home", function(request,response){
     response.send("<h1>this is our lovely homepage</h1>");
+});
+
+
+app.get("/about", function(request,response){
+    response.send("<h1>this ia about page of nodemon server1.js</h1>");
 });
