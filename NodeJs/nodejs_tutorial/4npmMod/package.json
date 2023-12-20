@@ -1,0 +1,14 @@
+{
+  "name": "npmod",
+  "version": "1.0.0",
+  "description": "npm installer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pratik patil",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
