@@ -12,8 +12,8 @@ const server = http.createServer((req,res)=>{
     }else if (req.url == '/contact'){
         res.end('hello from the contact side');
     }else{
-        res.writeHead(404);
-        res.end("404 - error");
+        res.writeHead(404, {"Content-type" : "text/html"});
+        res.end("<h1>404 - error</h1>");
     }
 })
 // now listen that server
