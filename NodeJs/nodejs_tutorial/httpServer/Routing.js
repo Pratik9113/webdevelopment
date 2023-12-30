@@ -5,7 +5,6 @@ const server = http.createServer((req,res)=>{
 
     const data = fs.readFile(`${__dirname}/UserApi/userapi.json`, 'utf8');
     const objData = JSON.parse(data);
-       
     // console.log(req.url);
     // how to do routing
     if(req.url == '/'){
