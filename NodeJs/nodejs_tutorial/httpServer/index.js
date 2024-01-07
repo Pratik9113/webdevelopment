@@ -25,7 +25,7 @@ const server = http.createServer((req,res)=>{
         res.end("you are at contact page buddy");
     }else{
         res.end(`404 page error doesn't exit`);
-    }``
+    }
     res.end("hello from the other side pratik");
 })
 
