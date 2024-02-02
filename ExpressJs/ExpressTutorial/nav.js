@@ -11,6 +11,9 @@ app.get('/' , (req,res) =>{
 app.get('/about' , (req,res) =>{
     res.send("about page");
 })
+
+
+
 // listen 
 app.listen(port, ()=>{
     console.log(`port is listen on ${port}`)
