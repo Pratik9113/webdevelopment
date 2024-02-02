@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin :auto;
+    padding-top: 250px;
+
+}
+.weathercon{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.box{
+    background-color: aqua;
+    height: auto;
+    width: max-content;
+    margin :auto;
+    
+    justify-content:center;
+    align-items:center;
+
+}
