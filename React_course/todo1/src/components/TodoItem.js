@@ -1,7 +1,6 @@
-function TodoItem2(){
-    let todoName = "Buy MiLK";
-    let todoDate = "12/02/2004";
+function TodoItem({todoName, todoDate}){
     return (
+        <>
         <div className="container">
             <div className="row kg-row" >
             <div className="col-6">
@@ -11,11 +10,12 @@ function TodoItem2(){
                 {todoDate}
             </div>
             <div className="col-2">
-                <button type="button" class="btn btn-danger kg-button">Delete</button>
+                <button type="button" className="btn btn-danger kg-button">Delete</button>
             </div>
             </div>
         </div>
+        </>
     )
 }
 
-export default TodoItem2;
+export default TodoItem;
