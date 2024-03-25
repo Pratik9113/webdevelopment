@@ -4,5 +4,5 @@ function AppName() {
             Todo App
         </h1>
     )
-}
+} 
 export default AppName;

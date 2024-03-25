@@ -3,7 +3,7 @@ import AppName from "./components/AppName";
 import "../src/App.css";
 function App() {
   return (
-    <center class="todo-container">
+    <center className="todo-container">
       <AppName />
       <AddTodo />
 

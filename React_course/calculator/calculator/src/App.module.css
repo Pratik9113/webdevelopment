@@ -1,0 +1,19 @@
+.calculator{
+    background-color: rgb(229, 235, 233);
+    border: 1px solid black;
+    height: auto;
+    width : 200px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.buttonscontainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.button{
+    height: 45px;
+    width: 45px;
+    margin:3px;
+}
