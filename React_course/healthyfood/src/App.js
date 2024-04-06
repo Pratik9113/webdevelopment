@@ -5,12 +5,17 @@ import Container from './components/Container';
 import FoodInput from './components/FoodInput';
 function App() {
   let foodItems = ["dal", "chawal" ,"sabji" ,"roti"];
+  
+  const handleOnChange = (event) =>{
+    console.log(event.target.value)
+    console.log(event)
+  }
   return (
     // container for boundary 
     <>
     <Container>
       <h1> Healty food</h1>
-      <FoodInput/>
+      <FoodInput handleOnChange={handleOnChange}></FoodInput>
       <FoodItems items = {foodItems}></FoodItems>
       <Errorcheck items = {foodItems}></Errorcheck>
     </Container>
