@@ -3,13 +3,23 @@ import Display from './components/Display'
 import ButtonContainer from './components/ButtonsContainer'
 import styles from './App.module.css'
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [calVal, setCalVal] = useState("");
+  const onButtonClick = (buttonText) => {
+    if (buttonText === 'C') {
+      setCalVal("")
+    } else if (buttonText === '=') {
+      const result = eval(calVal)
+      setCalVal(result)
+    } else {
+      const newDisplayValue = calVal + buttonText;
+      setCalVal(newDisplayValue)
+    }
+  }
   return (
     <>
       <div className={styles.calculator}>
-        <Display />
-        <ButtonContainer />
+        <Display key={calVal} displayValue={calVal} />
+        <ButtonContainer onButtonClick={onButtonClick} />
       </div>
     </>
   )
