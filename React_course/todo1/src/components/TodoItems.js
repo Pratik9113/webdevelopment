@@ -1,14 +1,18 @@
+import { useContext } from "react";
+import { TodoItemsContext } from "../store/todo-items-store";
 import TodoItem from "./TodoItem";
-
-const TodoItems = ({ todoItems, onDeleteClick }) => {
+const TodoItems = () => {
+    const contextObj = useContext(TodoItemsContext)
+    const todoItems = contextObj.todoItems
+    // const {deleteItem} = useContext(TodoItemsContext)
+    console.log(todoItems)
     return (
         <div className="item-container">
-            {todoItems.map((item, index) => ( 
+            {todoItems.map((item) => ( 
                 <TodoItem
-                    key={index} // Use index as key, but ideally, use a unique identifier from your data
                     todoDate={item.dueDate} 
                     todoName={item.name} 
-                    onDeleteClick={onDeleteClick}
+                    // onDeleteClick={deleteItem}
                 />
             ))}
         </div>
