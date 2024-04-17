@@ -21,24 +21,7 @@ return (
                 CreatePost
             </a>
             </li>
-            <li>
-            <a href="/" className="nav-link text-white">
-                <svg className="bi me-2" width="16" height="16"><use xlinkHref="#table"></use></svg>
-                Orders
-            </a>
-            </li>
-            <li>
-            <a href="/" className="nav-link text-white">
-                <svg className="bi me-2" width="16" height="16"><use xlinkHref="#grid"></use></svg>
-                Products
-            </a>
-            </li>
-            <li>
-            <a href="/" className="nav-link text-white">
-                <svg className="bi me-2" width="16" height="16"><use xlinkHref="#people-circle"></use></svg>
-                Customers
-            </a>
-            </li>
+            
         </ul>
         <hr />
         <div className="dropdown">

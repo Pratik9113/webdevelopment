@@ -8,3 +8,18 @@
   display: block;
   width: 100%;
 }
+
+
+.post-card{
+  margin : 10px 50px;
+  width: 30rem;
+}
+
+.hashtag{
+  margin : 0px 3px;
+}
+
+.reaction {
+  width : 100%;
+  margin: 10px;
+}
