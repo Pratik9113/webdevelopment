@@ -5,16 +5,9 @@ import Container from './components/Container';
 import FoodInput from './components/FoodInput';
 import { useState } from 'react';
 function App() {
-  // let foodItems = ["dal", "chawal" ,"sabji" ,"roti"];
-
-  // let textState = useState("food item enter by user ");
-  // let textToShow = textState[0];
-  // let setTextState = textState[1];
-  // this is array so we have to use []
-
+ 
   let [foodItems, setFoodItems] = useState(["dal", "chawal" ,"sabji" ,"roti"])
-
-  // that return two element 
+  
   const handleKeyDown = (event) =>{
     if (event.key === 'Enter'){
       let newFoodItem = event.target.value 

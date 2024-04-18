@@ -1,0 +1,3 @@
+import pratik
+
+pratik.printff()
