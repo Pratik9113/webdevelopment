@@ -19,15 +19,9 @@ const CreatePost = () => {
     const title = postTitleElement.current.value;
     const body = postBodyElement.current.value;
     const reactions = reactionsElement.current.value;
-    const tags = tagsElement.current.value.split(","); // Split tags by comma or any other delimiter
+    const tags = tagsElement.current.value.split(" "); 
 
-    addPost({
-        userId,
-        title,
-        body,
-        reactions,
-        tags
-    });
+    addPost(userId, title, body, reactions, tags);
 
     userIdElement.current.value = "";
     postTitleElement.current.value = "";
