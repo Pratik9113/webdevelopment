@@ -3,6 +3,7 @@ import { createContext, useReducer } from "react";
 export const PostList = createContext({
     postList : [],
     addPost : () => {},
+    addIntialPosts: ()=>{},
     deletePost : () => {},
 });
 
@@ -12,10 +13,15 @@ const postListReducer = (currPostList,action) =>{
         newPostList = currPostList.filter(post => post.id !== action.payload.postId)
     }else if (action.type === 'ADD_POST'){
         newPostList = [action.payload, ...currPostList];
+    }else if (action.type === 'ADD_INITIAL_POST'){
+        newPostList = action.payload.posts;
     }
     return newPostList;
 }
 const PostListProvider = ({children}) =>{
+    const[postList, dispatchPostList] = useReducer(postListReducer,[])
+
+
     const addPost = (userId, title, body, reactions, tags) => {
         dispatchPostList({
             type: 'ADD_POST',
@@ -28,6 +34,15 @@ const PostListProvider = ({children}) =>{
             }
         });
     };
+
+    const addIntialPosts = (posts) => {
+        dispatchPostList({
+            type: 'ADD_INITIAL_POST',
+            payload: {
+                posts :posts
+            }
+        });
+    };
     
     const deletePost = (postId) =>{
         dispatchPostList({
@@ -37,27 +52,10 @@ const PostListProvider = ({children}) =>{
             }
         })
     }
-    const[postList, dispatchPostList] = useReducer(postListReducer,DEFAULT_POST_LIST)
-    return <PostList.Provider value = {{postList : postList,addPost:addPost,deletePost  : deletePost}}>{children}</PostList.Provider>
+
+    return <PostList.Provider value = {{postList : postList,addPost:addPost,addIntialPosts: addIntialPosts,deletePost  : deletePost}}>{children}</PostList.Provider>
 }
 
 
-const DEFAULT_POST_LIST = [{
-    id : '1',
-    title : 'Going tot mumbai',
-    body: 'hgidlbkdjxnv kbdgkjdbojlv skcobd vbv uoxboidfj',
-    reactions :2,
-    userId :'pratik9113_',
-    tags : ['anpoi','mumbai','indore']
-},
-{
-    id : '2',
-    title : ' mumbai',
-    body: 'hgidlbkdjxnv kbdgkjdbojlv skcobd vbv uoxboidfj',
-    reactions :2,
-    userId :'pratik9113_',
-    tags : ['anpoi','mumbai','indore']
-}
 
-];
 export default PostListProvider 
