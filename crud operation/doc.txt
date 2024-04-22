@@ -1,0 +1,2 @@
+npm init -y : to intertiate package.json
+npm i nodemon -D
