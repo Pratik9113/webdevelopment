@@ -50,7 +50,7 @@ const PostListProvider = ({children}) =>{
             payload:{
                 postId,
             }
-        })
+        })  
     }
 
     return <PostList.Provider value = {{postList : postList,addPost:addPost,addIntialPosts: addIntialPosts,deletePost  : deletePost}}>{children}</PostList.Provider>

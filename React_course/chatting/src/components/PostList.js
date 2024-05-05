@@ -16,15 +16,14 @@ const PostList = () => {
       .then(res => res.json())
       .then(data => {
         addIntialPosts(data.posts);
-        setFetching(false); // Update fetching state when data is fetched
+        setFetching(false); 
       })
       .catch(error => {
         console.error('Error fetching posts:', error);
-        setFetching(false); // Handle fetch error by updating fetching state
+        setFetching(false); 
       });
 
     return () => {
-      // Cleanup function to abort fetch request when component unmounts
       controller.abort();
     };
   }, []);
